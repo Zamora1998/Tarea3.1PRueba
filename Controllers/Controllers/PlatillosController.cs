@@ -1,4 +1,4 @@
-﻿using ClasesData;
+﻿using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace Controllers.Controllers
 {
     public class PlatillosController : ApiController
     {
-        private RestauranteEntities Plati = new RestauranteEntities();
+        private tiusr30pl_RestauranteEntities Plati = new tiusr30pl_RestauranteEntities();
 
         public PlatillosController()
         {

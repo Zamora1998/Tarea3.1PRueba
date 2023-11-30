@@ -237,7 +237,7 @@
                 var ddlCategorias = document.getElementById('<%= ddleditarcategoria.ClientID %>');
                 ddlCategorias.innerHTML = '';
 
-                const categoriasResponse = await fetch('http://localhost:50912/api/Categorias/ObtenerCategorias');
+                const categoriasResponse = await fetch('https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Categorias/ObtenerCategorias');
                 const categoriasData = await categoriasResponse.json();
                 categoriasData.forEach(categoria => {
                     var option = document.createElement('option');
@@ -254,7 +254,7 @@
                 var ddlEstado = document.getElementById('<%= ddleditarestado.ClientID %>');
                 ddlEstado.innerHTML = '';
 
-                const response = await fetch('http://localhost:50912/api/Estados/ObtenerEstados');
+                const response = await fetch('https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Estados/ObtenerEstados');
                 const data = await response.json();
 
                 data.forEach(estado => {
@@ -273,7 +273,7 @@
                 var ddlCategorias = document.getElementById('<%= ddlcategoria.ClientID %>');
                 ddlCategorias.innerHTML = '';
 
-                const categoriasResponse = await fetch('http://localhost:50912/api/Categorias/ObtenerCategorias');
+                const categoriasResponse = await fetch('https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Categorias/ObtenerCategorias');
                 const categoriasData = await categoriasResponse.json();
                 categoriasData.forEach(categoria => {
                     var option = document.createElement('option');
@@ -290,7 +290,7 @@
                 var ddlEstado = document.getElementById('<%= ddlestado.ClientID %>');
                 ddlEstado.innerHTML = '';
 
-                const response = await fetch('http://localhost:50912/api/Estados/ObtenerEstados');
+                const response = await fetch('https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Estados/ObtenerEstados');
                 const data = await response.json();
 
                 data.forEach(estado => {
@@ -310,7 +310,7 @@
                 const categoria = parseInt(document.getElementById('<%= ddlcategoria.ClientID %>').value);
                 const estado = parseInt(document.getElementById('<%= ddlestado.ClientID %>').value);
 
-                fetch('http://localhost:50912/api/Platillos/RegistrarPlatillo', {
+                fetch('https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Platillos/RegistrarPlatillo', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -389,7 +389,7 @@
 
         async function cargarPlatillosDesdeAPI() {
             try {
-                const response = await fetch('http://localhost:50912/api/Platillos/ListarPlatillos');
+                const response = await fetch('https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Platillos/ListarPlatillos');
                 if (response.ok) {
                     const data = await response.json();
                     data.sort((a, b) => a.CategoriaNombre.localeCompare(b.CategoriaNombre));
@@ -435,7 +435,7 @@
                                 // Configurar el manejador del botón "Sí, Eliminar" en el modal de confirmación
                                 document.getElementById('botonEliminar').onclick = async () => {
                                     // Realizar la solicitud para eliminar la categoría
-                                    const response = await fetch(`http://localhost:50912/api/Platillos/EliminarPlatillo/${nombre}`, {
+                                    const response = await fetch(`https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Platillos/EliminarPlatillo/${nombre}`, {
                                         method: 'DELETE'
                                     });
 
@@ -482,7 +482,7 @@
                                 };
 
                                 // Realiza la solicitud al API para cambiar el estado del platillo.
-                                fetch('http://localhost:50912/api/Platillos/ActualizarEstadoPlatillo', {
+                                fetch('https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Platillos/ActualizarEstadoPlatillo', {
                                     method: 'PUT',
                                     headers: {
                                         'Content-Type': 'application/json'
@@ -577,7 +577,7 @@
                                         IDESTADO: estado
                                     };
 
-                                    const response = await fetch(`http://localhost:50912/api/Platillos/EditarPlatillo?nombreActual=${nombreActual}`, {
+                                    const response = await fetch(`https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Platillos/EditarPlatillo?nombreActual=${nombreActual}`, {
                                         method: 'PUT',
                                         headers: {
                                             'Content-Type': 'application/json'

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClasesData
+namespace DataAccess
 {
     using System;
     using System.Collections.Generic;

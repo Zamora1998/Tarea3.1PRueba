@@ -1,4 +1,4 @@
-﻿using ClasesData;
+﻿using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace Controllers.Controllers
 
     public class EstadoController : ApiController
     {
-        private RestauranteEntities Estado = new RestauranteEntities();
+        private tiusr30pl_RestauranteEntities Estado = new tiusr30pl_RestauranteEntities();
         public EstadoController()
         {
             Estado.Configuration.LazyLoadingEnabled = false;

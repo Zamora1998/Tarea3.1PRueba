@@ -54,7 +54,7 @@
     <script>  
         async function cargarPlatillosDesdeAPI() {
             try {
-                const response = await fetch('http://localhost:50912/api/Platillos/ListarPlatillos');
+                const response = await fetch('https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Platillos/ListarPlatillos');
                 if (response.ok) {
                     const data = await response.json();
                     data.sort((a, b) => a.CategoriaNombre.localeCompare(b.CategoriaNombre));

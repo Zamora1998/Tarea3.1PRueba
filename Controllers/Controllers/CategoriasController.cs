@@ -1,4 +1,4 @@
-﻿using ClasesData;
+﻿using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace Controllers.Controllers
 {
     public class CategoriasController : ApiController
     {
-        private RestauranteEntities Categ = new RestauranteEntities();
+        private tiusr30pl_RestauranteEntities Categ = new tiusr30pl_RestauranteEntities();
 
         public CategoriasController()
         {

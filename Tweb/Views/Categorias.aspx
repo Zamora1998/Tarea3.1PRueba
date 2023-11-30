@@ -152,7 +152,7 @@
 
         async function cargarDatosDesdeAPI() {
             try {
-                const response = await fetch('http://localhost:50912/api/Categorias/ObtenerCategorias');
+                const response = await fetch('https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Categorias/ObtenerCategorias');
                 if (response.ok) {
                     const data = await response.json();
                     const tabla = document.getElementById('tablaCategorias');
@@ -198,7 +198,7 @@
                                 // Configurar el manejador del botón "Sí, Eliminar" en el modal de confirmación
                                 document.getElementById('btnConfirmarEliminar').onclick = async () => {
                                     // Realizar la solicitud para eliminar la categoría
-                                    const response = await fetch(`http://localhost:50912/api/Categorias/EliminarCategoria/${id}`, {
+                                    const response = await fetch(`https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Categorias/EliminarCategoria/${id}`, {
                                         method: 'DELETE'
                                     });
                                     if (response.status === 200) {
@@ -250,7 +250,7 @@
                                     const requestBody = {
                                         Nombre: nuevoNombre
                                     };
-                                    const response = await fetch(`http://localhost:50912/api/Categorias/EditarCategoria?nombreActual=${nombreActual}`, {
+                                    const response = await fetch(`https://tiusr30pl.cuc-carrera-ti.ac.cr/Rest/api/Categorias/EditarCategoria?nombreActual=${nombreActual}`, {
                                         method: 'PUT',
                                         headers: {
                                             'Content-Type': 'application/json'
